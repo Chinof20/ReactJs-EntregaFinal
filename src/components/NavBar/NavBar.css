@@ -1,0 +1,12 @@
+.secciones{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10rem;
+    gap: 5rem;
+}
+
+.logo{
+    margin-left: 2rem;
+    height: 30px;
+    width: 80px;
+}

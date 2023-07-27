@@ -1,0 +1,58 @@
+
+
+.listGroup{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+
+.cardItem{
+    background-color: #970C0A;
+    color: black;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 40px 15px;
+}
+
+
+.itemImg{
+    border-radius: 20px;
+    height: 50%;
+    width: 50%;
+}
+
+
+.option{
+    background-color: #970C0A;
+    border-radius: 20px;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+
+.activeOption{
+    background-color: #970C0A;
+    border-radius: 20px;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+
+.detalle{
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    color: black;
+    list-style: none;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.info{
+    color: black;
+    padding: 0;
+}

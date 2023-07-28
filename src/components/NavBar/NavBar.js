@@ -9,31 +9,29 @@ export const NavBar = () =>{
     return (
         
         <div className="container mb-6">
-            <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
+            <nav className="navbar has-background-white-ter nav-bar" role="navigation" aria-label="main navigation">
 
-                    <NavLink to='/' className="is-flex">
-                        <div className="navbar-brand">
-                           
+                    <div className="navbar-brand">
+                        <NavLink to='/' className="is-flex">
                             <img src={Logo} className="logo" />
-                           
-                            <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            <span aria-hidden="true"></span>
-                            </a>
-                        </div>
-                    <p className="navbar-item" >Arigato</p>
-                    </NavLink>
-                    <div id="navbarBasicExample" className="navbar-menu">
-                        <div className="navbar-start secciones">
-                            <NavLink className="navbar-item" to='/categoria/arroces' > Arroces </NavLink>
-                            <NavLink className="navbar-item" to='/categoria/fideos' > Fideos </NavLink>
-                            <NavLink className="navbar-item" to='/categoria/sopas' > Sopas </NavLink>
-                            <NavLink className="navbar-item" to='/categoria/ensaladas' > Ensaladas </NavLink>
-                        </div>
+                            <p className="navbar-item title is-5 has-text-black" >Arigato</p>
+                        </NavLink>
+                        <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        </a>
                     </div>
-
-
+                    
+                <div id="navbarBasicExample" className="navbar-menu">
+                    <div className="navbar-start secciones">
+                        <NavLink className="navbar-item" to='/categoria/arroces' > Arroces </NavLink>
+                        <NavLink className="navbar-item" to='/categoria/fideos' > Fideos </NavLink>
+                        <NavLink className="navbar-item" to='/categoria/sopas' > Sopas </NavLink>
+                        <NavLink className="navbar-item" to='/categoria/ensaladas' > Ensaladas </NavLink>
+                    </div>
+                </div>
 
                 <div className="navbar-end">
                     <div className="navbar-item">
@@ -46,8 +44,8 @@ export const NavBar = () =>{
                 </div>
 
             </nav>
+
         </div>
-        
     )
 }
 

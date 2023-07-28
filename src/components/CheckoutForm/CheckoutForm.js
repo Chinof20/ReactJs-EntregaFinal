@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 const CheckoutForm = ({ onConfirm }) =>{
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
@@ -7,14 +6,11 @@ const CheckoutForm = ({ onConfirm }) =>{
     
     const handleConfirm = (event) => {
         event.preventDefault()
-
         const userData = {
             name, phone, email
         }
-    
         onConfirm(userData)
     }
-
 
     return(
         <div>
@@ -25,6 +21,7 @@ const CheckoutForm = ({ onConfirm }) =>{
                         <input class="input" type="text" placeholder="e.g Alex Smith" onChange={ ({target})=>setName(target.value)}/>
                     </div>
                 </div>
+                
                 <div class="field">
                     <label class="label">Teléfono</label>
                     <div class="control">
@@ -47,7 +44,5 @@ const CheckoutForm = ({ onConfirm }) =>{
         </div>
     )
 }
-
-
 
 export default CheckoutForm

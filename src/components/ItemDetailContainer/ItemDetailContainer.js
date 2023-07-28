@@ -5,10 +5,9 @@ import { useParams } from "react-router-dom";
 import { doc, getDoc} from "firebase/firestore"
 import { db } from "../../services/firebase/firebaseConfig"
 import "./ItemDetailContainer.css"
-
+import "bulma/css/bulma.css"
 export const ItemDetailContainer = () =>{
     const [data, setData] = useState([])
-
     const { itemId } = useParams()
 
     useEffect( () =>{
@@ -24,9 +23,8 @@ export const ItemDetailContainer = () =>{
             } )
     }, [itemId])
 
-
     return(
-        <div className="itemDetailContainer">
+        <div className="has-background-success itemDetailContainer">
             <ItemDetail data={data} />
         </div>
     )

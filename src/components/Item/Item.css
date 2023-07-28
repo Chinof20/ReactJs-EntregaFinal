@@ -3,7 +3,18 @@
 .listGroup{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
 
+}
+
+
+
+
+@media screen and (max-width: 700px) {
+    .listGroup{
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
 }
 
 
@@ -16,11 +27,13 @@
 }
 
 
-.itemImg{
-    border-radius: 20px;
-    height: 50%;
-    width: 50%;
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+
 
 
 .option{

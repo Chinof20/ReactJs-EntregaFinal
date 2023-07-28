@@ -10,7 +10,6 @@ import "bulma/css/bulma.css"
 
 export const ItemListContainer = () =>{
     const [data, setData] = useState([])
-
     const { categoriaId } = useParams()
 
     useEffect( () => {

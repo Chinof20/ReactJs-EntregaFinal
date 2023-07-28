@@ -21,17 +21,16 @@ const ItemCart = ({ product }) =>{
 
                 <tbody>
                     <tr>
-                        <td> <img className="itemImg"  src={product.image} alt={product.title} /> </td>
+                        <td> <img className="item-img"  src={product.image} alt={product.title} /> </td>
                         <td> <h1> {product.title} </h1> </td>
                         <td> <p> {product.quantity} </p> </td>
                         <td> <p> {product.price} </p></td>
                         <td> <p> {product.quantity*product.price} </p> </td>
-                        <td> <button className="button" onClick={() => removeProduct(product.id)} >X</button> </td>
+                        <td> <button className="button is-danger" onClick={() => removeProduct(product.id)} >X</button> </td>
                     </tr>
                 </tbody>
         </table>
     )
 }
-
 
 export default ItemCart

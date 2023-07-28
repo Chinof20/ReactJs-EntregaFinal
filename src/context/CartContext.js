@@ -4,8 +4,6 @@ import { useState, createContext } from "react";
 export const CartContext = createContext({
     cart: []
 })
-
-
 const CartProvider = ( {children} ) =>{
     
     const [cart, setCart] = useState([])
@@ -13,12 +11,8 @@ const CartProvider = ( {children} ) =>{
     const addProduct = ( item, newQuantity) =>{
         const { quantity = 0 } = cart.find( prod => prod.id === item.id ) || {}
         const newCart = cart.filter( prod => prod.id !== item.id )
-        //newCart.push({...item, quantity: newQuantity})
         setCart([...newCart, {...item, quantity: quantity+newQuantity } ])
-        //setCart(newCart)
     }
-
-    console.log("Carrito ", cart)
 
     const clearCart = () =>{
         setCart([])
@@ -40,15 +34,11 @@ const CartProvider = ( {children} ) =>{
         return cart.reduce( (acumulador, productoActual) => acumulador + productoActual.quantity, 0)
     }
 
-
-
     return(
         <CartContext.Provider value={{ cart ,clearCart, isInCart, removeProduct, addProduct, totalPrice, totalProducts }}>
             {children}
         </CartContext.Provider>
     )
 }
-
-
 
 export default CartProvider

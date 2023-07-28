@@ -4,11 +4,8 @@ import { useState } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Timestamp, addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore";
 import CheckoutForm from "../CheckoutForm/CheckoutForm"
-
-
 const Checkout = () => {
     const [orderId, setOrderId] = useState('')    
-
     const { cart, totalPrice, clearCart } = useContext(CartContext)
 
     const createOrder = async ( { name, phone, email } ) => {
@@ -57,23 +54,16 @@ const Checkout = () => {
         }
     }
 
-
-
     if(orderId){
-        return <h1>El id de su orden es: {orderId}</h1>
+        return <h1 className="title is-5 has-text-black">El id de su orden es: {orderId}</h1>
     }
     
-
     return(
         <div>
             <h1 className="title is-5 has-text-black">Checkout</h1>
             <CheckoutForm onConfirm={createOrder}/>
         </div>
     )
-
 }
-
-
-
 
 export default Checkout

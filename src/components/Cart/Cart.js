@@ -9,18 +9,20 @@ const Cart = () =>{
     
     if(cart.length === 0){
         return(
-            <>
+            <div>
                 <p className="title is-5 has-text-black"> No hay productos en el carrito </p>
-                <Link to='/' className="button is-light mb-5" > Hacer compras</Link>
-            </>
+                <Link to='/' className="button is-warning is-light mb-5" > Hacer compras</Link>
+            </div>
         )
     }
 
     return(
         <div className="container box">
-            {
-                cart.map( product => <ItemCart key={product.id} product={product} /> )
-            }
+            <div className="table-container">
+                {
+                    cart.map( product => <ItemCart key={product.id} product={product} /> )
+                }
+            </div>
             <tfoot className="table is-bordered is-flex is-flex-direction-column is-justify-content-center">
                 <th><abbr>   <p className="has-text-centered" >
                     Total: ${totalPrice()}    

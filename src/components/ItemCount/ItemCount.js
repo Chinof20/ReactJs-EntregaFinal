@@ -1,5 +1,4 @@
-
-//import "./ItemCount.css"
+import "./ItemCount.css"
 import React from "react";
 import { useState, useEffect } from "react";
 import "bulma/css/bulma.css"
@@ -21,7 +20,7 @@ export const ItemCount = ({ initial, stock, onAdd}) =>{
     }, [initial])
 
     return(
-        <div className="box has-background-danger is-flex is-flex-direction-column">
+        <div className="box has-background-success-dark is-flex is-flex-direction-column">
             <div className="is-flex is-justify-content-space-evenly">
                 <button className="button is-warning is-rounded" title="Disabled button" disabled={count<=1} onClick={decrement} >-</button>
                 <span className="title is-3 has-text-black" >{count}</span>
@@ -33,6 +32,5 @@ export const ItemCount = ({ initial, stock, onAdd}) =>{
         </div>
     )
 }
-
 
 export default ItemCount

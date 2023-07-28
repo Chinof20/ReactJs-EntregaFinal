@@ -11,7 +11,6 @@ export const ItemDetailContainer = () =>{
 
     const { itemId } = useParams()
 
-
     useEffect( () =>{
         const docRef = doc(db, 'productos', itemId)
         getDoc(docRef)
@@ -34,11 +33,3 @@ export const ItemDetailContainer = () =>{
 }
 
 export default ItemDetailContainer
-
-/*
-()=>{
-        const querydb = getFirestore()
-        const queryDoc = doc(querydb, 'productos', detalleId)
-        getDoc(queryDoc)
-            .then( res=> setData({ id: res.id, ...res.data()} ) )
-    }, [detalleId] */

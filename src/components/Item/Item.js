@@ -7,7 +7,7 @@ const Item = ({info}) =>{
     
     return(
     <div className="container mb-6">
-        <section className="section has-background-success-dark m-6">
+        <section className="section has-background-success-dark m-5">
             <header className="header">
                 <h2 className="title is-5 has-text-black">
                 {info.title}

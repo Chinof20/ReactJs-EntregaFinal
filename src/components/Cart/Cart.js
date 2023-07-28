@@ -10,8 +10,8 @@ const Cart = () =>{
     if(cart.length === 0){
         return(
             <>
-                <p> No hay productos en el carrito </p>
-                <Link to='/' > Hacer compras</Link>
+                <p className="title is-5 has-text-black"> No hay productos en el carrito </p>
+                <Link to='/' className="button is-light mb-5" > Hacer compras</Link>
             </>
         )
     }

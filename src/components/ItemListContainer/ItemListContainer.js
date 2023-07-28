@@ -13,11 +13,10 @@ export const ItemListContainer = () =>{
 
     const { categoriaId } = useParams()
 
-
     useEffect( () => {
             
-            const collectionRef = categoriaId ? query(collection(db, 'productos', where('category', '==', categoriaId))) : collection(db, 'productos');
-            //console.log(colletionRef)
+            const collectionRef = categoriaId ? query(collection(db, 'productos'), where('category', '==', categoriaId)) : collection(db, 'productos');
+
             getDocs(collectionRef)
                 .then( response => {
                     const productsAdapted = response.docs.map( doc => {
@@ -25,7 +24,7 @@ export const ItemListContainer = () =>{
                         return {id: doc.id, ...data}
                     } )
                     setData(productsAdapted)
-                    //console.log(productsAdapted)
+
                 } )
                 .catch( error => {
                     console.log(error)
@@ -42,16 +41,3 @@ export const ItemListContainer = () =>{
 }
 
 export default ItemListContainer
-/*         ()=>{
-        const querydb = getFirestore()
-        const queryCollection = collection(querydb, 'productos')
-        if( categoriaId ){
-            const queryFilter = query(queryCollection, where('category', '==', categoriaId))
-            getDocs(queryFilter)
-            .then( res => setData(res.docs.map( producto => ({id: producto.id, ...producto.data() }) )) )
-        }else{
-            getDocs(queryCollection)
-            .then( res => setData(res.docs.map( producto => ({id: producto.id, ...producto.data() }) )) )
-        }
-    
-    }, [categoriaId] */

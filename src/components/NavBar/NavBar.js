@@ -1,6 +1,6 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
-import {NavLink, Link} from 'react-router-dom'
+import { NavLink } from "react-router-dom";
 import Logo from "../../img/arigato_2023.png"
 import "./NavBar.css"
 import "bulma/css/bulma.css"
@@ -9,21 +9,21 @@ export const NavBar = () =>{
     return (
         
         <div className="container mb-6">
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar has-background-white-ter" role="navigation" aria-label="main navigation">
 
-                    <NavLink to='/'>
+                    <NavLink to='/' className="is-flex">
                         <div className="navbar-brand">
-                            <a className="navbar-item" >
+                           
                             <img src={Logo} className="logo" />
-                            </a>
+                           
                             <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                             <span aria-hidden="true"></span>
                             </a>
                         </div>
-                    </NavLink>
                     <p className="navbar-item" >Arigato</p>
+                    </NavLink>
                     <div id="navbarBasicExample" className="navbar-menu">
                         <div className="navbar-start secciones">
                             <NavLink className="navbar-item" to='/categoria/arroces' > Arroces </NavLink>
